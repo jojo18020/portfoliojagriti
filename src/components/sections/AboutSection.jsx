@@ -11,9 +11,9 @@ const AboutSection = () => (
     <div className="grid lg:grid-cols-2 gap-12">
       <div className="space-y-6 text-lg text-gray-200 leading-relaxed">
         <p>
-          Mechanical Engineering student at UIUC with an ECE minor, specializing in controls and robotics. I blend hardware
-          design, software development, and data analysis to build robust, intelligent robotic systems. Currently gaining
-          industry experience at Wipro PARI, working on automation and robotics projects.
+          Mechanical Engineering graduate from UIUC with an ECE minor, specializing in controls and robotics, currently 
+          working as a junior member at Wipro PARI.
+          I blend hardware design, software development, and data analysis to build robust, intelligent robotic systems. 
         </p>
         <p>
           My mission is to develop data-aware robot systems that can adapt and perform reliably in complex, real-world
