@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+@keyframes heading-typewriter-reveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes heading-typewriter-caret-move {
+  0% {
+    left: 0;
+    transform: translateX(0);
+  }
+  100% {
+    left: 100%;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes heading-typewriter-caret-blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    padding-right: 0.12em;
+    clip-path: inset(0 100% 0 0);
+    animation: heading-typewriter-reveal var(--heading-typewriter-duration, 1.8s)
+        steps(var(--heading-typewriter-steps, 32), end) forwards;
+  }
+
+  h1::after,
+  h2::after,
+  h3::after,
+  h4::after,
+  h5::after,
+  h6::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0.1em;
+    background-color: #ff0000;
+    animation:
+      heading-typewriter-caret-move var(--heading-typewriter-duration, 1.8s)
+        steps(var(--heading-typewriter-steps, 32), end) forwards,
+      heading-typewriter-caret-blink 0.8s steps(1, end) infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @layer base {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      clip-path: none;
+      animation: none;
+    }
+
+    h1::after,
+    h2::after,
+    h3::after,
+    h4::after,
+    h5::after,
+    h6::after {
+      content: none;
+      animation: none;
+    }
+  }
+}
