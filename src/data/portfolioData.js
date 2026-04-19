@@ -78,13 +78,13 @@ export const quickFacts = [
 
 export const experiences = [
    {
-    id: 'peppermint',
+    id: 'wipro',
     role: 'Intern - Graduate Engineering Trainee',
     org: 'Peppermint Robotics Ltd',
     location: 'India',
     dates: 'Jan 2026 - Present',
     link: 'https://www.peppermintrobotics.com/europe',
-    image: `${PUB}/media/wp.png`,
+    image: `${PUB}/media/peppermint.png`,
     tools: ['Gazebo', 'ROS2', 'Notion', 'Linux],
     bullets: [
       'Integrated LiDAR sensors for environment perception and obstacle detection, improving navigation reliability of autonomous mobile robots (AMRs)',
@@ -92,7 +92,6 @@ export const experiences = [
       'Implemented computer vision–based line following using OpenCV as an alternative navigation strategy for dynamic environments',
       'Built low-level drivers and interfaced magnetic tape sensors using industrial communication protocols like Modbus over RS232/RS485'
     ],
-    mediaSlots: [`${PUB}/media/cadmodeler.png`]
   },
   {
     id: 'wipro',
